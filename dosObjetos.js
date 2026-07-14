@@ -1,37 +1,35 @@
-/* Función que detecta colisión entre dos objetos circulares
-function hayColision(objA, objB) {
-  const dx = objB.x - objA.x; // diferencia en X
-  const dy = objB.y - objA.y; // diferencia en Y
-  const distancia = Math.sqrt(dx * dx + dy * dy); // fórmula de la distancia
-  const sumaRadios = objA.radio + objB.radio; // suma de los radios
-  return distancia <= sumaRadios; // true si hay colisión
-}
-
-
-const j1 = { x: 120, y: 80, radio: 20 };
-const j2 = { x: 150, y: 100, radio: 25 };
-
-const colision = hayColision(j1, j2);
-console.log(colision); // true o false*/
-
-
+/*esta son las declaraciones de las variables (const indica que es una
+variable que no modifica su valor*/
 const jugadorx = 120;
 const jugadory = 80;
 const radio = 20;
 
+/*esta son las declaraciones de las variables (const indica que es una
+variable que no modifica su valor*/
 const jugadorx1 = 150;
 const jugadory1 = 100;
 const radio1 = 25;
 
+/*aqui estas diciendo que  vas a tomar dx (distancia x) y 
+dy( distancia y) y vas a rerstar los valores de cada una*/
 const dx = jugadorx1 - jugadorx;
 const dy = jugadory1 - jugadory;
 
+/*aqui estas llamando la funcion de math.sqrt para realizar
+las operaciones correspondientes como lo que es la raiz*/
 const distancia = Math.sqrt(dx * dx + dy * dy);
+
+/* en esta creas una variable llamada  sumaradios y 
+le asignas como valor el resultado de la suma de los radios*/
 const sumaradios = radio + radio1;
 
+/*esta diciendo que si distancia es menor o igual 
+a  la suma de los radios  hay colicion*/
 if (distancia <= sumaradios) {
 console.log("hay colision");
 }
+/*en esta estas diciendo que si no no hay colicion 
+(esta diciendo que si distancia es mayor hay coliciion*/
 else{
 console.log("no hay colision");
 }
